@@ -6,3 +6,8 @@ out/
 !/broadcast
 /broadcast/*
 /broadcast/*/31337/
+
+# Env Files
+.env
+.env.*
+ 
