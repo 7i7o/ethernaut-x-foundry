@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+envsource .env
+
+forge script --rpc-url $RINKEBY_RPC_URL --private-key $PRIVATE_KEY --broadcast -vvvv $argv
+
+envsourceclear .env

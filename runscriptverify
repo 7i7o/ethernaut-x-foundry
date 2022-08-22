@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+envsource .env;
+
+forge script --rpc-url $RINKEBY_RPC_URL  --private-key $PRIVATE_KEY --broadcast -vvvv --verify --etherscan-api-key $ETHERSCAN_KEY $argv
+envsourceclear .env
