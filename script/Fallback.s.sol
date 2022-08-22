@@ -42,7 +42,7 @@ contract FallbackScript is Script {
         console.log(" |- Level owner: ", owner);
 
         // Make sure the contract is pwned
-        vm.assertEq(owner, msg.sender);
+        require(owner == msg.sender, " ##### Contract still not pwned! ##### ");
 
         uint256 contractBalance = address(LEVEL_INSTANCE).balance;
         console.log(" |- Contract balance: ", contractBalance);
